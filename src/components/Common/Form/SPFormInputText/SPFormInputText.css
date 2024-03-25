@@ -1,0 +1,59 @@
+.sp_form_input_text {
+    --sp-text-transition: 0.2s ease-out;
+
+    --sp-text-label-margin-left: 0.25rem;
+    --sp-text-label-font-size: 0.95em;
+    --sp-text-label-font-weight: bold;
+
+    --sp-text-input-margin-top: 0.25rem;
+    --sp-text-input-padding: 0.375rem 0.625rem;
+    --sp-text-input-font-size: 1em;
+    --sp-text-input-border: 0.125rem solid #AAAAAA;
+    --sp-text-input-focus-border: 0.125rem solid var(--color-primary);
+    --sp-text-input-focus-box-shadow: 0px 0px 4px 1px var(--color-primary);
+    --sp-text-input-border-radius: 0.3rem;
+
+    --sp-text-error-font-size: 0.65em;
+    --sp-text-error-font-weight: bold;
+    --sp-text-error-color: #F71B2F;
+}
+
+.sp_form_input_text {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 25rem;
+}
+
+.sp_form_input_text label {
+    margin-left: var(--sp-text-label-margin-left);
+    font-size: var(--sp-text-label-font-size);
+    font-weight: var(--sp-text-label-font-weight);
+    user-select: none;
+}
+
+.sp_form_input_text input {
+    width: 100%;
+    outline: none;
+    margin-top: var(--sp-text-input-margin-top);
+    padding: var(--sp-text-input-padding);
+    font-size: var(--sp-text-input-font-size);
+    border: var(--sp-text-input-border);
+    border-radius: var(--sp-text-input-border-radius);
+    transition: var(--sp-text-transition);
+}
+
+.sp_form_input_text input:focus {
+    outline: 0;
+    border: var(--sp-text-input-focus-border);
+    box-shadow: var(--sp-text-input-focus-box-shadow);
+}
+
+.sp_form_input_error {
+    min-height: 1.5em;
+    margin-top: 0.1rem;
+    margin-left: var(--sp-text-label-margin-left);
+    font-size: var(--sp-text-error-font-size);
+    font-weight: var(--sp-text-error-font-weight);
+    color: var(--sp-text-error-color);
+}

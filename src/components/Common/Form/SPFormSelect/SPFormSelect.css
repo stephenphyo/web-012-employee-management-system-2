@@ -1,0 +1,101 @@
+.sp_form_select {
+    --sp-form-select-transition: 0.2s ease-out;
+
+    --sp-form-select-label-margin-left: 0.25rem;
+    --sp-form-select-label-font-size: 0.95em;
+    --sp-form-select-label-font-weight: bold;
+    --sp-form-select-label-text-color: #555555;
+
+    --sp-form-select-margin-top: 0.25rem;
+    --sp-form-select-padding: 0.375rem 0.625rem;
+    --sp-form-select-font-size: 1em;
+    --sp-form-select-text-color: #000000;
+    --sp-form-select-background-color: #FFFFFF;
+    --sp-form-select-border: 0.125rem solid #AAAAAA;
+    --sp-form-select-border-radius: 0.3rem;
+    --sp-form-select-focus-border: 0.125rem solid var(--color-primary);
+    --sp-form-select-focus-box-shadow: 0px 0px 4px 1px var(--color-primary);
+
+    --sp-form-select-option-text-color: #000000;
+    --sp-form-select-option-background-color: #FFFFFF;
+}
+
+.sp_form_select {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 25rem;
+}
+
+.sp_form_select label {
+    margin-left: var(--sp-form-select-label-margin-left);
+    font-size: var(--sp-form-select-label-font-size);
+    font-weight: var(--sp-form-select-label-font-weight);
+    color: var(--sp-form-select-label-text-color);
+    user-select: none;
+}
+
+.sp_form_select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    width: 100%;
+    margin-top: var(--sp-form-select-margin-top);
+    padding: var(--sp-form-select-padding);
+    font-size: var(--sp-form-select-font-size);
+
+    height: var(--input-height);
+
+    border: var(--sp-form-select-border);
+    border-radius: var(--sp-form-select-border-radius);
+
+    color: var(--sp-form-select-text-color);
+    background-color: var(--sp-form-select-background-color);
+
+    transition: var(--sp-form-select-transition);
+}
+
+.sp_form_select select:focus {
+    outline: 0;
+    border: var(--sp-form-select-focus-border);
+    box-shadow: var(--sp-form-select-focus-box-shadow);
+}
+
+.sp_form_select select:disabled {
+    color: #555555;
+    background-color: transparent;
+}
+
+.sp_form_select select:invalid {
+    color: gray;
+}
+
+.sp_form_select option {
+    color: var(--sp-form-select-option-text-color);
+    background-color: var(--sp-form-select-option-background-color);
+    font-size: 1.1em;
+}
+
+/* Arrow */
+.sp_form_select_wrapper {
+    position: relative;
+}
+
+#arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    width: 0;
+    height: 0;
+    border-left: 0.375rem solid transparent;
+    border-right: 0.375rem solid transparent;
+    border-top: 0.375rem solid #555;
+    border-radius: 0.175rem;
+    transition: var(--sp-form-select-transition);
+}
+
+.sp_form_select select:focus+#arrow::after {
+    transform: rotate(180deg);
+}

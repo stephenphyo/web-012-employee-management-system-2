@@ -1,0 +1,21 @@
+.form_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2rem;
+    margin: 0.3rem 0 !important;
+    user-select: none;
+}
+
+.form_button button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    color: var(--color-text-secondary);
+}

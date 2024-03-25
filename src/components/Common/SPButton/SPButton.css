@@ -1,0 +1,71 @@
+.sp_button {
+    --sp-button-min-width: 5rem;
+    --sp-button-height: 32px;
+    --sp-button-border-radius: 0.25rem;
+    --sp-button-text-color: #FFFFFF;
+    --sp-button-background-color: #4285F4;
+}
+
+.sp_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: var(--sp-button-min-width);
+    height: var(--sp-button-height);
+    padding: 0.6em 1.14em;
+    word-wrap: break-word;
+    white-space: nowrap;
+    text-transform: var(--text-transform);
+    user-select: none;
+    border: none;
+    border-radius: var(--sp-button-border-radius);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition-delay) ease;
+}
+
+.sp_button.filled {
+    color: var(--sp-button-text-color);
+    background-color: var(--sp-button-background-color);
+}
+
+.sp_button.outlined {
+    color: var(--sp-button-background-color);
+    background-color: transparent;
+    border: 2px solid var(--sp-button-background-color);
+}
+
+.sp_button.text {
+    color: var(--sp-button-background-color);
+    background-color: none;
+    box-shadow: none;
+}
+
+.sp_button.filled:hover,
+.sp_button.outlined:hover {
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.sp_button.text:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+}
+
+.sp_button.filled-on-hover {
+    color: var(--background-color);
+    background-color: transparent;
+    border: 2px solid var(--background-color);
+}
+
+.sp_button.filled-on-hover:hover {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.sp_button.disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
