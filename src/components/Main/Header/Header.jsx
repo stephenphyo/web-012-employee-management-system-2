@@ -33,7 +33,7 @@ function Header() {
 
     return (
         <div className='header'>
-            <div className='header_left'>
+            <div className='header_left' style={{flex: '1', fontFamily: 'Playfair Display', fontWeight: 'bold', fontStyle: 'italic', fontSize: '25px'}}>
 
                 {/* Menu Bar */}
                 <span className='header_icon'
@@ -42,28 +42,12 @@ function Header() {
                 </span>
 
                 {/* Logo */}
-                <img src='https://img.freepik.com/premium-vector/red-youtube-logo-social-media-logo_197792-1803.jpg'
-                    alt='logo' className='header_logo'
-                    onClick={() => navigate('/')} />
-            </div>
-
-            {/* Search Bar */}
-            <div className='header_center'>
-                <div className='header_search'>
-                    <input type='text' placeholder='Search' />
-                    <button type='submit'>
-                        <BsSearch size={22} />
-                    </button>
-                </div>
+                <span>EMS</span>
             </div>
 
             <div className='header_right'>
                 <span className='header_icon'>
                     <IoNotifications id='icon' size={26} />
-                    <span id='badge'>10</span>
-                </span>
-                <span className='header_icon'>
-                    <FaCartShopping id='icon' size={25} />
                     <span id='badge'>10</span>
                 </span>
                 <span className='header_icon'>
@@ -104,8 +88,3 @@ function Header() {
 }
 
 export default Header;
-// <Dropdown title='User'>
-//     <Dropdown.Item>My Profile</Dropdown.Item>
-//     <Dropdown.Item>Order History</Dropdown.Item>
-//     <Dropdown.Item style={{ 'color': 'red' }}>Logout</Dropdown.Item>
-// </Dropdown>
