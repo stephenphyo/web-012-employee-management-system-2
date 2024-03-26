@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for React Application using AWS
+name: CI/CD Pipeline for React UI Application using AWS ECS
 
 on:
   push:

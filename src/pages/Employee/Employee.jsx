@@ -21,7 +21,6 @@ import { FaEye, FaTrash } from 'react-icons/fa6';
 import { FiEdit } from 'react-icons/fi';
 
 /*** Package Imports ***/
-import { Bars } from 'react-loader-spinner';
 import toast from 'react-hot-toast';
 
 function Employee() {
@@ -40,7 +39,7 @@ function Employee() {
 
     /* Hooks */
     const { fetch, response, error } = useAxios();
-    const { fetch: fetchDelete, response: responseDelete, error: errorDelete } = useAxios();
+    const { fetch: fetchDelete } = useAxios();
 
     /* Functions */
     const fetchData = useCallback((url) => {

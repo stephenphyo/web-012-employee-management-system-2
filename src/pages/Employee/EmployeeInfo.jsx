@@ -38,7 +38,7 @@ function EmployeeInfo() {
     const { fetch: fetchGet, response: responseGet, error: errorGet } = useAxios();
     const { fetch: fetchCreate, response: responseCreate, error: errorCreate, isLoading: isLoadingCreate } = useAxios();
     const { fetch: fetchUpdate, response: responseUpdate, error: errorUpdate, isLoading: isLoadingUpdate } = useAxios();
-    const { fetch: fetchGetDepartments, response: responseGetDepartments, error: errorGetDepartments, isLoading: isLoadingGetDepartments } = useAxios();
+    const { fetch: fetchGetDepartments, response: responseGetDepartments, error: errorGetDepartments } = useAxios();
     const { fetch: fetchGetUnits, response: responseGetUnits, error: errorGetUnits, isLoading: isLoadingGetUnits } = useAxios();
 
     /* useCallback */

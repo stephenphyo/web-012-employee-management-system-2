@@ -1,12 +1,12 @@
 {
     "extends": [
-        "react-app"
-        // "eslint:recommended",
-        // "plugin:react/recommended"
+        "react-app",
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "rules": {
         "react-hooks/exhaustive-deps": "off",
         "react/prop-types": "off",
-        "react/no-unknown-property": ["error", { "ignore": ["jsx"] }]
+        "react/no-unknown-property": "off"
     }
 }

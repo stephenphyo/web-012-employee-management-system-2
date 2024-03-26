@@ -3,9 +3,6 @@ import React, { useEffect, useState } from 'react';
 /*** CSS Imports ***/
 import './Unit.css';
 
-/*** Router Imports  ***/
-import { useNavigate } from 'react-router-dom';
-
 /***  Hook Imports ***/
 import useAxios from 'hooks/useAxios';
 
@@ -18,9 +15,6 @@ import { FaEye, FaTrash } from 'react-icons/fa6';
 import { FiEdit } from 'react-icons/fi';
 
 function Unit() {
-
-    /* Router */
-    const navigate = useNavigate();
 
     /* useState */
     const [units, setUnits] = useState([]);

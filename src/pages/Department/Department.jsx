@@ -21,7 +21,6 @@ import { FiEdit } from 'react-icons/fi';
 import { FaEye, FaTrash } from 'react-icons/fa6';
 
 /*** Package Imports ***/
-import { Bars } from 'react-loader-spinner';
 import toast from 'react-hot-toast';
 
 function Department() {

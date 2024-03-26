@@ -10,8 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import Dropdown from 'components/Common/Dropdown/Dropdown';
 
 /*** Icon Imports ***/
-import { FaBars, FaCartShopping } from "react-icons/fa6";
-import { BsSearch } from "react-icons/bs";
+import { FaBars } from "react-icons/fa6";
 import { MdApps } from 'react-icons/md';
 import { IoNotifications } from "react-icons/io5";
 
@@ -42,7 +41,9 @@ function Header() {
                 </span>
 
                 {/* Logo */}
-                <span>EMS</span>
+                <span style={{color: 'red'}}>E</span>
+                <span style={{color: 'green'}}>M</span>
+                <span style={{color: 'blue'}}>S</span>
             </div>
 
             <div className='header_right'>
