@@ -64,12 +64,6 @@ function Unit() {
                         <Table.Row key={index}>
                             <Table.Data>{(currentPage - 1) * currentPageSize + index + 1}</Table.Data>
                             <Table.Data>{unit?.unitName}</Table.Data>
-                            <Table.Data>{unit?.description}</Table.Data>
-                            <Table.Data>
-                                <a href={`/department/${unit?.department?.id}`}>
-                                    {unit?.department?.departmentName}
-                                </a>
-                            </Table.Data>
                             <Table.Data>
                                 <span className='d-flex gap-2'>
                                     <FaEye size={16} style={{ color: 'blue' }} />
