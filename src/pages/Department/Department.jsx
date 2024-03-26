@@ -125,11 +125,6 @@ function Department() {
                             <Table.Data>{department?.departmentCode}</Table.Data>
                             <Table.Data>{department?.departmentName}</Table.Data>
                             <Table.Data>
-                                <a href={`/employee/${department?.headOfDepartment?.id}`}>
-                                    {`${department?.headOfDepartment?.firstName} ${department?.headOfDepartment?.lastName}`}
-                                </a>
-                            </Table.Data>
-                            <Table.Data>
                                 <span className='d-flex gap-2'>
                                     <FaEye size={16} style={{ color: 'blue', cursor: 'pointer' }}
                                         onClick={() => navigate(`/department/${department?.id}`)} />

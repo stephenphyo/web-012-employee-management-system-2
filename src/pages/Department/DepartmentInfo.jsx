@@ -99,9 +99,6 @@ function DepartmentInfo() {
                             { ...department, departmentName: e.target.value }
                         )}
                         disabled={!isEditable} />
-                    <SPFormInputText className='col-12 col-md-6' label='Head of Department'
-                        value={`${department?.headOfDepartment?.firstName} ${department?.headOfDepartment?.lastName}`}
-                        disabled />
                 </Form.Body>
                 <Form.Footer>
                     {
