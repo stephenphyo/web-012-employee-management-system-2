@@ -78,6 +78,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: task-definition.json
-          service: svc-ems-frontend-2
+          service: svc-ems-frontend
           cluster: cluster-ems
           wait-for-service-stability: true
