@@ -1,7 +1,10 @@
-import { Outlet } from 'react-router-dom';
+import React  from 'react';
 
 /*** CSS Imports ***/
 import './MainLayout.css';
+
+/*** Router Imports ***/
+import { Outlet } from 'react-router-dom';
 
 /***  Component Imports ***/
 import Header from 'components/Main/Header/Header';

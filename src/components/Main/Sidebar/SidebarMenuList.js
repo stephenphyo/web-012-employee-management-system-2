@@ -1,15 +1,11 @@
+import React  from 'react';
+
 /*** React Icon Imports  ***/
 import { MdExitToApp } from 'react-icons/md';
 import { FaUserTie, FaBuilding } from 'react-icons/fa';
-import { IoApps } from 'react-icons/io5';
 import { RiCommunityFill } from 'react-icons/ri';
 
 const SidebarMenuList = [
-    {
-        Text: 'Dashboard',
-        URL: '/',
-        Icon: <IoApps size={22} />
-    },
     {
         Text: 'Employees',
         URL: '/employee',

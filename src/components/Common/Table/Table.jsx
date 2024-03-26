@@ -130,7 +130,7 @@ function Row(props) {
     /* useEffect */
     useEffect(() => {
         // 'props.children' is not always an array.
-        // If a component has only one child element, 'props.children' is the single child element itself. 
+        // If a component has only one child element, 'props.children' is the single child element itself.
         // Instead of 'props.children.length', use this:
         const numElements = React.Children.count(props.children);
         setNumFilledElements(Math.max(0, numColumns - numElements));

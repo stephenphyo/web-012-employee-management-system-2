@@ -21,4 +21,6 @@ const FormButton = forwardRef((props, ref) => {
     );
 });
 
+FormButton.displayName = 'FormButton';
+
 export default FormButton;

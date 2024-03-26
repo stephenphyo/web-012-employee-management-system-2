@@ -30,4 +30,6 @@ const Option = (props) => {
 
 SPFormSelect.Option = Option;
 
+SPFormSelect.displayName = 'SPFormSelect';
+
 export default SPFormSelect;

@@ -36,4 +36,6 @@ const FormInputPassword = forwardRef((props, ref) => {
     );
 });
 
+FormInputPassword.displayName = 'FormInputPassword';
+
 export default FormInputPassword;

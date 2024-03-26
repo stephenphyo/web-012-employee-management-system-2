@@ -43,15 +43,6 @@ function App() {
                         <Route path='/unit' element={<Unit />} />
                     </Route>
 
-
-                    {/* <Route path='/user' element={<UserLayout />}>
-                        <Route element={<ProtectedRoute />}>
-                            <Route path='account'>
-                                <Route path='profile' element={<Profile />} />
-                            </Route>
-                        </Route>
-                    </Route> */}
-
                 </Routes>
             </Router>
         </main>

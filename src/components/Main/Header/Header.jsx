@@ -48,7 +48,7 @@ function Header() {
             <div className='header_right'>
                 <span className='header_icon'>
                     <IoNotifications id='icon' size={26} />
-                    <span id='badge'>10</span>
+                    <span id='badge'>0</span>
                 </span>
                 <span className='header_icon'>
                     <MdApps size={26} />

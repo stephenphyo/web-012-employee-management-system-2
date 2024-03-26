@@ -21,4 +21,6 @@ const FormInputText = forwardRef((props, ref) => {
     );
 });
 
+FormInputText.displayName = 'FormInputText';
+
 export default FormInputText;
