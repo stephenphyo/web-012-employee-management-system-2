@@ -57,8 +57,8 @@ function Unit() {
                     totalRecords={totalRecords} />
             </TableControls>
             <Table
-                headings={['No.', 'Unit Name', 'Description', 'Department', 'Actions']}
-                numColumns={5}>
+                headings={['No.', 'Unit Name', 'Actions']}
+                numColumns={3}>
                 {
                     units?.map((unit, index) => (
                         <Table.Row key={index}>

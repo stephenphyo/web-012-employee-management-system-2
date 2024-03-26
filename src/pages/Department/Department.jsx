@@ -116,8 +116,8 @@ function Department() {
                     totalRecords={totalRecords} />
             </TableControls>
             <Table
-                headings={['No.', 'Department Code', 'Department Name', 'Head of Department', 'Actions']}
-                numColumns={5}>
+                headings={['No.', 'Department Code', 'Department Name', 'Actions']}
+                numColumns={4}>
                 {
                     departments.map((department, index) => (
                         <Table.Row key={index}>
