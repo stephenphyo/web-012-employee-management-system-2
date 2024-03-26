@@ -80,7 +80,7 @@ jobs:
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: svc-ems-frontend
-          cluster: cluster-ems-frontend
+          cluster: cluster-ems
           wait-for-service-stability: true
   # deploy:
   #   name: Deploy to Amazon ECS
