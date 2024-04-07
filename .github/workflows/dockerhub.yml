@@ -2,11 +2,11 @@ name: CI Pipeline for ASP.NET API Application using Dockerhub
 
 on:
   push:
-    branches: ["web-012-backend-api"]
+    branches: ["backend"]
     tags:
       - "v*.*"
   pull_request:
-    branches: ["web-012-backend-api"]
+    branches: ["backend"]
 
 jobs:
   build:
