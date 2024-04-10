@@ -1,0 +1,75 @@
+name: CI Pipeline for ASP.NET UI Application using Dockerhub
+
+on:
+  push:
+    branches: ["web-012-frontend-ui"]
+    tags:
+      - "v*.*.*"
+  pull_request:
+    branches: ["web-012-frontend-ui"]
+
+env:
+  REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+
+jobs:
+  build:
+    if: github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Checkout
+        id: vars
+        run: |
+          tag=${GITHUB_REF#refs/*/}
+          tag=${tag%% *}
+          echo "tag=$tag" >> $GITHUB_OUTPUT
+
+      - name: Setup Git Config
+        run: |
+          git config user.name "Stephen Phyo"
+          git config user.email "stephenphyo2019.official@gmail.com"
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Linting with ESLint
+        run: npm run lint
+
+      - name: Testing with Jest
+        run: npm test
+
+      - name: Build React Project
+        run: npm run build --if-present
+        env:
+          CI: false
+
+      - name: Save Version
+        id: version
+        run: echo ::set-output name=tag
+
+      - name: Login to DockerHub Registry
+        uses: docker/login-action@v1
+        with:
+          username: ${{  secrets.DOCKERHUB_USERNAME }}
+          password: ${{  secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build & Push to Docker Hub Repository
+        uses: docker/build-push-action@v4
+        with:
+          push: true
+          context: .
+          file: Dockerfile.prod
+          tags: stephenphyo/web-012-employee-management-system-frontend:latest
