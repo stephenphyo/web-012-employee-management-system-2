@@ -8,9 +8,6 @@ on:
   pull_request:
     branches: ["web-012-frontend-ui"]
 
-env:
-  REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
-
 jobs:
   build:
     if: github.ref_type == 'tag'
