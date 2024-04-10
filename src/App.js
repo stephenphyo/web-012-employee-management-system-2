@@ -7,6 +7,7 @@ import './App.css';
 /*** Package Imports ***/
 import { Toaster } from 'react-hot-toast';
 import HealthCheck from 'HealthCheck';
+import Dashboard from 'pages/Dashboard/Dashboard';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <Toaster position='top-right' />
             <Router>
                 <Routes>
+                    <Route path='/' element={<Dashboard />} />
                     <Route path='/health' element={<HealthCheck />} />
                 </Routes>
             </Router>
