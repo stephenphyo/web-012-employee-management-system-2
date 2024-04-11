@@ -6,7 +6,8 @@ import './App.css';
 
 /*** Package Imports ***/
 import { Toaster } from 'react-hot-toast';
-import HealthCheck from 'HealthCheck';
+
+/*** Page Imports ***/
 import Dashboard from 'pages/Dashboard/Dashboard';
 
 function App() {
@@ -16,7 +17,6 @@ function App() {
             <Router>
                 <Routes>
                     <Route path='/' element={<Dashboard />} />
-                    <Route path='/health' element={<HealthCheck />} />
                 </Routes>
             </Router>
         </main>
